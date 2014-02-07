@@ -1,11 +1,11 @@
 language: go
 go:
-  - 1.2
-  - tip
+- 1.2
+- tip
 install:
-  - go get code.google.com/p/go.tools/cmd/cover
+- go get code.google.com/p/go.tools/cmd/cover
 script:
-  - go test -cover -v
+- go test -cover -v
 env:
   global:
-    secure: Z8cCT27IxMUzjonibIGiEqn4LRqBf6++9F4XeqGznTX++XjMNJkppUKAwHbDI10QMsU3ij1U4OF6huaOJ9Sa+yO6z/2UsEujy1qojqwNonikaAWTFO2y93oOWFqRCrVadIGATuH/jvQrRIJIClop0X1dzd666ox+mf2n97Bc2eE=
+  - secure: J9ROQ45TGiF/BS7XpG+1TfSgFlL4NgF+3otJFtHeWdWZko689dnHrCl7WbWu30PmuQ8AtcyDtpPXlh7Sz2cS3whwsB6cwlE1yzW9xp2yp88QjqKtMiiUKREyli2SOdnrRIeV8PXd+7lQo1HSiY0ZOjrqnKcFot1V7gAXqw6l2ZI=
