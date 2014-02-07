@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/yosssi/gonhk.png?branch=master)](https://travis-ci.org/yosssi/gonhk)
 [![GoDoc](https://godoc.org/github.com/yosssi/gonhk?status.png)](https://godoc.org/github.com/yosssi/gonhk)
 
-gonhk implements a NHK API client.
+gonhk implements a [NHK API](http://api-portal.nhk.or.jp/) client.
 
 ## Installation
 
