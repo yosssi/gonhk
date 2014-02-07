@@ -1,5 +1,7 @@
 # gonhk - NHK API Client in Go
 
+[![Build Status](https://travis-ci.org/yosssi/gonhk.png?branch=master)](https://travis-ci.org/yosssi/gonhk)
+
 gonhk implements a NHK API client.
 
 ## Installation
