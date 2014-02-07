@@ -1,0 +1,12 @@
+language: go
+go:
+- 1.0
+- 1.1
+- 1.2
+- tip
+script:
+- go test -cover -v
+- go test -race
+env:
+  global:
+    secure: Z8cCT27IxMUzjonibIGiEqn4LRqBf6++9F4XeqGznTX++XjMNJkppUKAwHbDI10QMsU3ij1U4OF6huaOJ9Sa+yO6z/2UsEujy1qojqwNonikaAWTFO2y93oOWFqRCrVadIGATuH/jvQrRIJIClop0X1dzd666ox+mf2n97Bc2eE=
