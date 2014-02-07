@@ -4,7 +4,7 @@ go:
   - tip
 install:
   - go get code.google.com/p/go.tools/cmd/cover
-  - go get -d -v ./...
+  - go install -race
 script:
   - go test -cover -v
   - go test -race
