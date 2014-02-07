@@ -61,6 +61,10 @@ func main() {
 }
 ```
 
+## Documentation
+
+[GoDoc](http://godoc.org/github.com/yosssi/gonhk).
+
 ## Note
 情報提供:ＮＨＫ  
 This program uses [NHK番組表API](http://api-portal.nhk.or.jp/).
