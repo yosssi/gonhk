@@ -63,7 +63,7 @@ func main() {
 
 ## Documentation
 
-[GoDoc](http://godoc.org/github.com/yosssi/gonhk).
+[GoDoc](http://godoc.org/github.com/yosssi/gonhk)
 
 ## Note
 情報提供:ＮＨＫ  
