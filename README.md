@@ -10,7 +10,7 @@ gonhk implements a NHK API client.
 $ go get github.com/yosssi/gonhk
 ```
 
-## Examples
+## Example
 
 ```go
 package main
