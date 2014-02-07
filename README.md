@@ -27,7 +27,7 @@ func main() {
 
 	today := time.Now().Format("2006-01-02")
 
-	// Call NHK Program List API
+	// Call NHK Program List API.
 	// http://api-portal.nhk.or.jp/doc_list-v1_con
 	result1, err := client.ProgramList("v1", "130", "g1", today)
 	if err != nil {
@@ -35,7 +35,7 @@ func main() {
 	}
 	fmt.Printf("%+v\n", result1)
 
-	// Call NHK Program Genre API
+	// Call NHK Program Genre API.
 	// http://api-portal.nhk.or.jp/doc_genre-v1_con
 	result2, err := client.ProgramGenre("v1", "130", "g1", "0000", today)
 	if err != nil {
@@ -43,7 +43,7 @@ func main() {
 	}
 	fmt.Printf("%+v\n", result2)
 
-	// Call NHK Program Info API
+	// Call NHK Program Info API.
 	// http://api-portal.nhk.or.jp/doc_info-v1_con
 	result3, err := client.ProgramInfo("v1", "130", "g1", "2014020702065")
 	if err != nil {
@@ -51,7 +51,7 @@ func main() {
 	}
 	fmt.Printf("%+v\n", result3)
 
-	// Call NHK Now On Air API
+	// Call NHK Now On Air API.
 	// http://api-portal.nhk.or.jp/doc_now-v1_con
 	result4, err := client.NowOnAir("v1", "130", "g1")
 	if err != nil {
