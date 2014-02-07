@@ -73,7 +73,7 @@ type NhkDescription struct {
 	ProgramUrl  string     `json:"program_url"`
 	EpisodeUrl  string     `json:"episode_url"`
 	Hashtags    []string   `json:"hashtags"`
-	extras      NhkExtra   `json:"extras"`
+	Extras      NhkExtra   `json:"extras"`
 }
 
 // An NhkArea represents an area data of NHK API.
