@@ -15,7 +15,8 @@ import (
 )
 
 const (
-	baseUrl = "http://api.nhk.or.jp/"
+	baseUrl    = "http://api.nhk.or.jp/"
+	dateFormat = "2006-01-02"
 )
 
 // A Client represents a NHK API client.
@@ -118,14 +119,14 @@ type NhkError struct {
 }
 
 // ProgramList calls NHK Program List API and returns its result.
-func (c *Client) ProgramList(version, area, service, date string) (*NhkList, error) {
-	url := fmt.Sprintf(baseUrl+"%s/pg/list/%s/%s/%s.json?key=%s", version, area, service, date, c.apikey)
+func (c *Client) ProgramList(version, area, service string, date time.Time) (*NhkList, error) {
+	url := fmt.Sprintf(baseUrl+"%s/pg/list/%s/%s/%s.json?key=%s", version, area, service, date.Format(dateFormat), c.apikey)
 	return getNhkList(url)
 }
 
 // ProgramGenre calls NHK Program Genre API and returns its result.
-func (c *Client) ProgramGenre(version, area, service, genre, date string) (*NhkList, error) {
-	url := fmt.Sprintf(baseUrl+"%s/pg/genre/%s/%s/%s/%s.json?key=%s", version, area, service, genre, date, c.apikey)
+func (c *Client) ProgramGenre(version, area, service, genre string, date time.Time) (*NhkList, error) {
+	url := fmt.Sprintf(baseUrl+"%s/pg/genre/%s/%s/%s/%s.json?key=%s", version, area, service, genre, date.Format(dateFormat), c.apikey)
 	return getNhkList(url)
 }
 

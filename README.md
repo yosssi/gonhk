@@ -25,7 +25,7 @@ func main() {
 	// Get an NHK API client. You have to pass your NHK API key to this function.
 	client := gonhk.NewClient("Your NHK API Key")
 
-	today := time.Now().Format("2006-01-02")
+	today := time.Now()
 
 	// Call NHK Program List API.
 	// http://api-portal.nhk.or.jp/doc_list-v1_con

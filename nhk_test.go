@@ -18,7 +18,7 @@ import (
 var (
 	apikey    string
 	c         Client
-	today     string
+	today     time.Time
 	programId string
 )
 
@@ -30,7 +30,7 @@ func init() {
 		os.Exit(1)
 	}
 	c = NewClient(apikey)
-	today = time.Now().Format("2006-01-02")
+	today = time.Now()
 }
 
 // TestProgramList tests ProgramList.
@@ -53,7 +53,7 @@ func TestProgramList(t *testing.T) {
 	fmt.Println("\n==============================================================\n")
 
 	// Abnormal end is expected.
-	result, err = c.ProgramList("v1", "130", "g1", "2001-01-01")
+	result, err = c.ProgramList("v1", "130", "g1", time.Date(2001, 1, 1, 0, 0, 0, 0, time.Local))
 	if err == nil {
 		t.Error("An expected error did not occur")
 	}
@@ -77,7 +77,7 @@ func TestProgramGenre(t *testing.T) {
 	fmt.Println("\n==============================================================\n")
 
 	// Abnormal end is expected.
-	result, err = c.ProgramGenre("v1", "130", "g1", "0000", "2001-01-01")
+	result, err = c.ProgramGenre("v1", "130", "g1", "0000", time.Date(2001, 1, 1, 0, 0, 0, 0, time.Local))
 	if err == nil {
 		t.Error("An expected error did not occur")
 	}
@@ -143,7 +143,7 @@ func TestNewClient(t *testing.T) {
 // TestGetNhkList tests getNhkList
 func TestGetNhkList(t *testing.T) {
 	// Normal end is expected.
-	url := fmt.Sprintf("http://api.nhk.or.jp/v1/pg/list/130/g1/%s.json?key=%s", today, c.apikey)
+	url := fmt.Sprintf("http://api.nhk.or.jp/v1/pg/list/130/g1/%s.json?key=%s", today.Format("2006-01-02"), c.apikey)
 	_, err := getNhkList(url)
 	if err != nil {
 		t.Error(err)
@@ -221,7 +221,7 @@ func TestGetNhkNowOnAirList(t *testing.T) {
 // TestDecoder tests decoder.
 func TestDecoder(t *testing.T) {
 	// Normal end is expected.
-	url := fmt.Sprintf("http://api.nhk.or.jp/v1/pg/list/130/g1/%s.json?key=%s", today, c.apikey)
+	url := fmt.Sprintf("http://api.nhk.or.jp/v1/pg/list/130/g1/%s.json?key=%s", today.Format("2006-01-02"), c.apikey)
 	_, err := decoder(url)
 	if err != nil {
 		t.Error(err)
@@ -245,7 +245,7 @@ func TestDecoder(t *testing.T) {
 // TestApiError tests apiError.
 func TestApiError(t *testing.T) {
 	// Case1. Not returned NHK API error.
-	url := fmt.Sprintf("http://api.nhk.or.jp/v1/pg/list/130/g1/%s.json?key=%s", today, c.apikey)
+	url := fmt.Sprintf("http://api.nhk.or.jp/v1/pg/list/130/g1/%s.json?key=%s", today.Format("2006-01-02"), c.apikey)
 	res, _ := http.Get(url)
 	defer res.Body.Close()
 	b, _ := ioutil.ReadAll(res.Body)
