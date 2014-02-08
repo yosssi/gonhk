@@ -6,4 +6,6 @@ script:
   - go test -cover -v
 notify:
   email:
-    recipients: yoshida.keiji.84@gmail.com
+    recipients:
+      - yoshida.keiji.84@gmail.com
+      - yoshida.keiji@economica.co.jp
