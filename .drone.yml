@@ -10,5 +10,5 @@ notify:
       - yoshida.keiji.84@gmail.com
       - yoshida.keiji@economica.co.jp
   hipchat:
-    room: drone-test
-    token: vggmqaD6CVpPqC0rgjvNmjeKzafQYKj41z8PwnKI
+    room: dronetest
+    token: BouFtrrti0SpwcjreLG74LEMojaNt3VezwhzywwF
