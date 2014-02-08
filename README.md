@@ -1,6 +1,6 @@
 # gonhk - NHK API Client in Go
 
-[![Build Status](http://192.241.247.52/gonhk/status.png?branch=master)](http://192.241.247.52/gonhk/tree/master)
+[![Build Status](http://192.241.247.52/github.com/yosssi/gonhk/status.png?branch=master)](http://192.241.247.52/github.com/yosssi/gonhk/tree/master)
 [![GoDoc](https://godoc.org/github.com/yosssi/gonhk?status.png)](https://godoc.org/github.com/yosssi/gonhk)
 
 gonhk implements a [NHK API](http://api-portal.nhk.or.jp/) client.
